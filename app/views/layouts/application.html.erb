@@ -19,14 +19,14 @@
         <ul class="nav navbar-nav navbar-right">
           <% if logged_in? %>
             <li>
-              <%= link_to "#" do %>
-                <%= image_tag "icons/heart.png" %>
-              <% end %>
+            <%= link_to favorites_index_path do %>
+            <%= image_tag 'icons/heart.png' %>
+            <% end %>
             </li>
-            <li>
-              <%= link_to "#" do %>
-                <%= image_tag "icons/camera.png" %>
-              <% end %>
+            <li> 
+            <%= link_to new_topic_path do %>
+               <% image_tag'icons/camera.png' %>
+            <% end %>
             </li>
             <li>
               <%= link_to logout_path, method: :delete do %>
@@ -53,6 +53,6 @@
   $(function(){
     $(".alert").fadeOut(5000);
   });
-　</script>
+  </script>
 </body>
 </html>
